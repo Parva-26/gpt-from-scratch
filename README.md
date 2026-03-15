@@ -106,7 +106,6 @@ In October 2006, the Ministry of Internal Affairs of the Ministry of Internal Af
 # Running Training
 '''bash
 python training/train.py
-'''
 
 Training automatically resumes from the latest checkpoint.
 
@@ -117,14 +116,12 @@ Training automatically resumes from the latest checkpoint.
 python inference/generate.py \
 --checkpoint /content/drive/MyDrive/gpt_checkpoints/ckpt_53000.pt \
 --prompt "Artificial Intelligence and Banking are 2 of the most important sectors in human society nowadays along with "
-'''
 
 ---
 
 # Evaluation
 '''bash
 python evaluation/perplexity.py
-'''
 
 ---
 
