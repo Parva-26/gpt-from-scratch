@@ -19,15 +19,15 @@ The objective of this project was to:
 
 
 
-# Model Architecture
-
-The model follows the standard GPT architecture:
+# Model 
 
 - Decoder-only Transformer
 - Causal self-attention
 - Multi-head attention
 - LayerNorm
 - Feed-forward networks
+
+## Model Architecture
 
 Input Text
     │
