@@ -1,0 +1,6 @@
+
+torch
+tiktoken
+pyyaml
+datasets
+tqdm

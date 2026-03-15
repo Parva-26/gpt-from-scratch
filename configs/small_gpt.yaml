@@ -1,0 +1,24 @@
+
+model:
+  vocab_size: 50257
+  block_size: 256
+  n_layer: 6
+  n_head: 6
+  n_embd: 384
+  dropout: 0.1
+
+training:
+  batch_size: 8
+  grad_accum_steps: 16
+  max_steps: 55000
+  eval_interval: 500
+  save_interval: 500
+
+optimizer:
+  lr: 0.0003
+  weight_decay: 0.1
+
+dataset:
+  data_dir: "data"
+  train_file: "train_tokens.npy"
+  val_file: "val_tokens.npy"
