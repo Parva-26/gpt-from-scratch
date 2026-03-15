@@ -18,7 +18,6 @@ The objective of this project was to:
 - Implement inference and evaluation tools
 
 
-
 # Model 
 
 - Decoder-only Transformer
@@ -27,21 +26,33 @@ The objective of this project was to:
 - LayerNorm
 - Feed-forward networks
 
+### Model Summary
+
+| Component | Value |
+|----------|------|
+| Parameters | ~30M |
+| Layers | 8 |
+| Heads | 8 |
+| Embedding Size | 512 |
+| Context Length | 256 |
+| Tokenizer | GPT-2 BPE (tiktoken) |
+
 ## Model Architecture
 
 ```mermaid
 flowchart TD
-A[Input Text] --> B[Tokenization<br>GPT-2 BPE via tiktoken]
+
+A[Input Text] --> B[GPT2 BPE Tokenization]
 B --> C[Token Embeddings]
 C --> D[Positional Embeddings]
 
-D --> E[Transformer Block × N]
+D --> E[Transformer Blocks x N]
 
 subgraph Transformer Block
 F[LayerNorm]
-G[Multi-Head Self Attention]
+G[Multi Head Self Attention]
 H[Residual Connection]
-I[Feed Forward Network (MLP)]
+I[Feed Forward Network]
 J[Residual Connection]
 end
 
@@ -52,8 +63,8 @@ H --> I
 I --> J
 
 J --> K[Final LayerNorm]
-K --> L[Linear Language Modeling Head]
-L --> M[Next Token Probability Distribution]
+K --> L[Linear LM Head]
+L --> M[Next Token Probability]
 ```
 
 
