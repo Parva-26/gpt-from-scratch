@@ -30,35 +30,37 @@ The model follows the standard GPT architecture:
 - Feed-forward networks
 
 Input Text
-│
-▼
+    │
+    ▼
 Tokenization (GPT-2 BPE via tiktoken)
-│
-▼
+    │
+    ▼
 Token Embeddings
-│
-▼
+    │
+    ▼
 Positional Embeddings
-│
-▼
-┌───────────────────────────┐
-│ Transformer Block × N │
-│ │
-│ LayerNorm │
-│ Multi-Head Self-Attention│
-│ Residual Connection │
-│ Feed Forward Network │
-│ Residual Connection │
-└───────────────────────────┘
-│
-▼
+    │
+    ▼
+┌───────────────────────────────────────┐
+│        Transformer Block × N          │
+│                                       │
+│  LayerNorm                            │
+│  Multi-Head Self-Attention            │
+│  Residual Connection                  │
+│  Feed-Forward Network (MLP)           │
+│  Residual Connection                  │
+│                                       │
+└───────────────────────────────────────┘
+    │
+    ▼
 Final LayerNorm
-│
-▼
+    │
+    ▼
 Linear Language Modeling Head
-│
-▼
+    │
+    ▼
 Next-Token Probability Distribution
+
 
 This is essentially the same architecture used in GPT-2 and other autoregressive language models.
 
@@ -126,7 +128,6 @@ Sharding
 ▼
 80 Shards
 (~800M tokens total)
-
 
 
 # Training Setup
