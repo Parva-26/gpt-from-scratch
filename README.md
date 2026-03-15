@@ -103,26 +103,25 @@ The dataset size of **~800M tokens refers to tokens produced by this GPT-2 BPE t
 
 ## Dataset Pipeline
 
-Wikipedia
-OpenWebText
-TinyStories
-│
-▼
-Text Cleaning
-│
-▼
-Tokenization (GPT-2 BPE)
-│
-▼
-Token Stream
-│
-▼
-Sharding
-(10M tokens per shard)
-│
-▼
-80 Shards
-(~800M tokens total)
+```mermaid
+flowchart TD
+
+A[Wikipedia]
+B[OpenWebText]
+C[TinyStories]
+
+A --> D[Text Cleaning]
+B --> D
+C --> D
+
+D --> E[GPT2 BPE Tokenization]
+
+E --> F[Token Stream]
+
+F --> G[Dataset Sharding]
+
+G --> H[80 Shards ~800M Tokens]
+```
 
 
 # Training Setup
