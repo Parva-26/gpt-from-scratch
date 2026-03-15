@@ -37,6 +37,8 @@ The objective of this project was to:
 | Context Length | 256 |
 | Tokenizer | GPT-2 BPE (tiktoken) |
 
+A larger model than 30M paramters was not feasible due to **limited compute resources**.
+
 ## Model Architecture
 
 ```mermaid
@@ -69,12 +71,6 @@ L --> M[Next Token Probability]
 
 
 This is essentially the same architecture used in GPT-2 and other autoregressive language models.
-
-### Approximate model size
-
-~30M parameters
-
-A larger model was not feasible due to **limited compute resources**.
 
 
 
