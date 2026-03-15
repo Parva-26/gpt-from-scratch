@@ -145,10 +145,10 @@ Training was performed using:
 
 Example configuration used during training:
 
-Layers: 8
-Embedding Size: 512
-Attention Heads: 8
-Context Length: 256
+Layers: 8 |
+Embedding Size: 512 |
+Attention Heads: 8 |
+Context Length: 256 |
 Parameters: ~30M
 
 ### Hardware
