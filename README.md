@@ -29,37 +29,32 @@ The objective of this project was to:
 
 ## Model Architecture
 
-Input Text
-    │
-    ▼
-Tokenization (GPT-2 BPE via tiktoken)
-    │
-    ▼
-Token Embeddings
-    │
-    ▼
-Positional Embeddings
-    │
-    ▼
-┌───────────────────────────────────────┐
-│        Transformer Block × N          │
-│                                       │
-│  LayerNorm                            │
-│  Multi-Head Self-Attention            │
-│  Residual Connection                  │
-│  Feed-Forward Network (MLP)           │
-│  Residual Connection                  │
-│                                       │
-└───────────────────────────────────────┘
-    │
-    ▼
-Final LayerNorm
-    │
-    ▼
-Linear Language Modeling Head
-    │
-    ▼
-Next-Token Probability Distribution
+```mermaid
+flowchart TD
+A[Input Text] --> B[Tokenization<br>GPT-2 BPE via tiktoken]
+B --> C[Token Embeddings]
+C --> D[Positional Embeddings]
+
+D --> E[Transformer Block × N]
+
+subgraph Transformer Block
+F[LayerNorm]
+G[Multi-Head Self Attention]
+H[Residual Connection]
+I[Feed Forward Network (MLP)]
+J[Residual Connection]
+end
+
+E --> F
+F --> G
+G --> H
+H --> I
+I --> J
+
+J --> K[Final LayerNorm]
+K --> L[Linear Language Modeling Head]
+L --> M[Next Token Probability Distribution]
+```
 
 
 This is essentially the same architecture used in GPT-2 and other autoregressive language models.
