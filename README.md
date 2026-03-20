@@ -186,7 +186,7 @@ Generated Text:
 Artificial Intelligence and Banking are 2 of the most important sectors in human society nowadays along with  an international network, and  an international network.
 The International Office for Finance and Housing is a European and International Bank of Technology established by the Ministry of Industry, for the work of the Ministry of Health and Environment. 
 In May 2005, the Ministry of Public Radio was renamed the International Bank of Energy in October 2006.
-In October 2006, the Ministry of Internal Affairs of the Ministry of Internal Affairs of the Ministry of Land in the Ministry of Internal Affairs in the Ministry of Internal Affairs in the Ministry of Internal Affairs.
+In October 2006, the Ministry of Internal Affairs of the 
 
 
 
