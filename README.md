@@ -37,7 +37,7 @@ The objective of this project was to:
 | Context Length | 256 |
 | Tokenizer | GPT-2 BPE (tiktoken) |
 
-A larger model than 30M paramters was not feasible due to **limited compute resources**.
+Model size was constrained to 30M parameters to fit within free-tier Colab T4 GPU constraints — a deliberate engineering tradeoff.
 
 ## Model Architecture
 
